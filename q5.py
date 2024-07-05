@@ -27,7 +27,6 @@ def scrabble_score(word):
                 score += key
     return score
 
-
 def display_title():
     ''' 
         Display the title of the game
@@ -39,7 +38,6 @@ def display_title():
     print("")
     print("Scrabble Score")
     print("")
-
 
 def play_again():
     ''' 
