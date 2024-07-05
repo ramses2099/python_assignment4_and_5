@@ -22,6 +22,43 @@ number of scores below it as above it. For an even number of scores, calculate t
 median by taking the average of the two middle numbers.
 
 # Question-2.
+Use a list to store the players
+
+Update the program (discussed in class) so it allows you to store the players for the
+starting lineup. This should include the player's name, position, at bats, and hits. In
+addition, the program should calculate the player's batting average from at bats and hits.
+Console
+============================================================
+Baseball Team Manager
+MENU OPTIONS
+1 - Display lineup
+2 - Add player
+3 - Remove player
+4 - Move player
+5 - Edit player position
+6 - Edit player stats
+7 - Exit program
+POSITIONS
+C, 1B, 2B, 3B, SS, LF, CF, RF, P
+===========================================================
+Menu option: 2
+Name: Mike
+Position: OF
+Invalid position. Try again.
+POSITIONS
+C, 1B, 2B, 3B, SS, LF, CF, RF, P
+Position: CF
+At bats: 4
+Hits: 1
+Mike was added.
+Menu option: 7
+Bye!
+Specifications
+• Use a list of lists to store each player in the lineup.
+• Use a tuple to store all valid positions (C, 1B, 2B, etc).
+• Make sure that the user's entry for position is valid, and entries for hits and at bats
+• make sense.
+• Make sure you test all menu options(screenshots)
 
 
 # Question-3.
