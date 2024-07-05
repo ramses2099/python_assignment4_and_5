@@ -26,18 +26,18 @@ median by taking the average of the two middle numbers.
 Use a list to store the players
 
 Update the program (discussed in class) so it allows you to store the players for the
-starting lineup. This should include the player’s name, position, at bats, and hits. In
-addition, the program should calculate the player’s batting average from at bats and hits.
+starting lineup. This should include the player's name, position, at bats, and hits. In
+addition, the program should calculate the player's batting average from at bats and hits.
 Console
 ============================================================
 Baseball Team Manager
 MENU OPTIONS
-1 – Display lineup
-2 – Add player
-3 – Remove player
-4 – Move player
-5 – Edit player position
-6 – Edit player stats
+1 - Display lineup
+2 - Add player
+3 - Remove player
+4 - Move player
+5 - Edit player position
+6 - Edit player stats
 7 - Exit program
 POSITIONS
 C, 1B, 2B, 3B, SS, LF, CF, RF, P
