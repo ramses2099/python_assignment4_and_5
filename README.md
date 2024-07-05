@@ -20,3 +20,73 @@ statistics for the test scores, like this:
 above. For an odd number of scores, the median score is the score that has the same
 number of scores below it as above it. For an even number of scores, calculate the
 median by taking the average of the two middle numbers.
+
+# Question-2.
+
+Use a list to store the players
+
+Update the program (discussed in class) so it allows you to store the players for the
+starting lineup. This should include the player’s name, position, at bats, and hits. In
+addition, the program should calculate the player’s batting average from at bats and hits.
+Console
+============================================================
+Baseball Team Manager
+MENU OPTIONS
+1 – Display lineup
+2 – Add player
+3 – Remove player
+4 – Move player
+5 – Edit player position
+6 – Edit player stats
+7 - Exit program
+POSITIONS
+C, 1B, 2B, 3B, SS, LF, CF, RF, P
+===========================================================
+Menu option: 2
+Name: Mike
+Position: OF
+Invalid position. Try again.
+POSITIONS
+C, 1B, 2B, 3B, SS, LF, CF, RF, P
+Position: CF
+At bats: 4
+Hits: 1
+Mike was added.
+Menu option: 7
+Bye!
+Specifications
+• Use a list of lists to store each player in the lineup.
+• Use a tuple to store all valid positions (C, 1B, 2B, etc).
+• Make sure that the user's entry for position is valid, and entries for hits and at bats
+• make sense.
+• Make sure you test all menu options(screenshots)
+
+# Question-3.
+Create a program that determines and displays the number of unique characters in a
+string entered by the user. For example, Hello, World! has 10 unique characters while zzz has only one
+unique character.
+Specifications
+• Use a dictionary or set to solve this problem.
+• Define a function
+
+# Question-4. 
+
+This exercise examines the process of identifying the maximum value in a collection of
+integers. Each of the integers will be randomly selected from the numbers between 1 and 100.
+The collection of integers may contain duplicate values, and some of the integers between 1 and 100
+may not be present.
+Specifications
+Use randrange and import the relative python library to generate the random numbers
+
+# Question-5. 
+
+In the game of ScrabbleTM, each letter has points associated with it. The total score of a
+word is the sum of the scores of its letters. More common letters are worth fewer points while less
+common letters are worth more points.
+The points associated with each letter are shown below:
+
+Write a program that computes and displays the ScrabbleTM score for a word.
+Specifications
+• Create a dictionary that maps from letters to point values. Then use the
+dictionary to compute the score.
+• Use a function
