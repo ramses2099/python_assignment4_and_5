@@ -1,6 +1,7 @@
-#!/usr/bin/env python3
+#! ./env/bin/ python
 from typing import List
 from os import system
+import statistics
 
 def display_welcome():
     print("The Test Scores program")
@@ -19,37 +20,54 @@ def get_scores() -> List:
         if score == "x":
             return  data
         else:
-            score = int(score)
-            if score >= 0 and score <= 100:
-                data.append(score)
-                
-            else:
-                print("Test score must be from 0 through 100. " +
-                      "Score discarded. Try again.")
+            try:
+                score = int(score)
+                if score >= 0 and score <= 100:
+                    data.append(score)                    
+                else:
+                    print("Test score must be from 0 through 100. " +
+                        "Score discarded. Try again.")
+            except ValueError:
+                    print("Invalid input. Please enter a number.")
 
 
 # 4. Modify the process_scores() function so the scores list is its only argument. 
 # Then, this function should use a for statement to total the scores in the list.
 # It should use the len()function to get the number of scores in the list. 
 # And it should get the average by dividing the total scores by the length.
-def process_scores(list_score:List)->None:
+def process_scores(list_score: List) -> None:
     elem_count = len(list_score)
-    score_total = 0
-    count = 0
-    average = 0
-    if(elem_count > 0):
-        # calculate average score
-        for n in list_score:
-            score_total += n
-            count += 1
+    if elem_count > 0:
+        score_total = sum(list_score)
+        count = elem_count
+        average = score_total / count
+        minimum = min(list_score)
+        maximum = max(list_score)
+        stdev = statistics.stdev(list_score)
         
-        # calculate average score
-        average = score_total / count            
-        # format and display the result
+        # Calculate median
+        sorted_scores = sorted(list_score)
+        if elem_count % 2 == 1:
+            median = sorted_scores[elem_count // 2]
+        else:
+            median = (sorted_scores[elem_count // 2 - 1] + sorted_scores[elem_count // 2]) / 2
+        
+        # Calculate mode (if exists)
+        try:
+            mode = statistics.mode(list_score)
+        except statistics.StatisticsError:
+            mode = "No unique mode"
+        
+        # Print all statistics
         print()
         print("Score total:       ", score_total)
         print("Number of Scores:  ", count)
         print("Average Score:     ", average)
+        print("Minimum Score:     ", minimum)
+        print("Maximum Score:     ", maximum)
+        print("Median Score:      ", median)
+        print("Mode:              ", mode)
+        print("Standard Deviation:", stdev)
     else:
        print()
        print("No input score for calculation") 
