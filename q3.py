@@ -25,8 +25,10 @@ def count_unique_characters(input_string:str)->int:
 
 
 def main():
-    system('clear')
     # input
+    print()
+    print("Unique Character Counter")
+    print()
     str_input = input("Enter a string: ")
 
     # Call the function and display the result
