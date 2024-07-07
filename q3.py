@@ -29,7 +29,7 @@ def main():
     print()
     print("Unique Character Counter")
     print()
-    str_input = input("Enter a string: ")
+    str_input = input("Enter a string: ").lower() # Convert input to lowercase to avoid case sensitivity
 
     # Call the function and display the result
     count = count_unique_characters(str_input)
