@@ -8,10 +8,11 @@ from os import system
 # starting lineup. This should include the player's name, position, at bats, and hits. In
 # addition, the program should calculate the player's batting average from at bats and hits.
 
-valid_positions = ('C', '1B', '2B', '3B', 'SS', 'LF', 'CF', 'RF', 'P')
-lineup = []
+valid_positions = ('C', '1B', '2B', '3B', 'SS', 'LF', 'CF', 'RF', 'P')  # 2. Use a tuple to store all valid positions
+lineup = [] # 1. Use a list to store the players
 
 def display_menu():
+    print()
     print("============================================================")
     print("Baseball Team Manager")
     print("MENU OPTIONS")
@@ -22,7 +23,10 @@ def display_menu():
     print("5 - Edit player position")
     print("6 - Edit player stats")
     print("7 - Exit program")
+    print("POSITIONS")
+    print(", ".join(valid_positions))
     print("============================================================")
+    print()
 
 def display_positions():
     print("POSITIONS")
@@ -42,7 +46,7 @@ def add_player():
     name = input("Name: ")
     while True:
         position = input("Position: ")
-        if position in valid_positions:
+        if position in valid_positions: # 3. Making sure the position entered is valid
             break
         else:
             print("Invalid position. Try again.")
@@ -51,7 +55,7 @@ def add_player():
     while True:
         try:
             at_bats = int(input("At bats: "))
-            if at_bats >= 0:
+            if at_bats >= 0: # 3. Validating the number of at bats
                 break
         except ValueError:
             pass
@@ -60,7 +64,7 @@ def add_player():
     while True:
         try:
             hits = int(input("Hits: "))
-            if 0 <= hits <= at_bats:
+            if 0 <= hits <= at_bats: # 3. Validating the number of hits
                 break
         except ValueError:
             pass
@@ -95,7 +99,7 @@ def move_player():
                 print("Invalid new position.")
         else:
             print("Invalid player number.")
-    except ValueError:
+    except ValueError: 
         print("Invalid entry. Please enter valid numbers.")
 
 def edit_player_position():
