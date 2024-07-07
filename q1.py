@@ -4,6 +4,7 @@ from os import system
 import statistics
 
 def display_welcome():
+    print()
     print("The Test Scores program")
     print("Enter 'x' to exit")
     print("")
@@ -40,10 +41,10 @@ def process_scores(list_score: List) -> None:
     if elem_count > 0:
         score_total = sum(list_score)
         count = elem_count
-        average = score_total / count
+        average = round((score_total / count), 2)
         minimum = min(list_score)
         maximum = max(list_score)
-        stdev = statistics.stdev(list_score)
+        stdev = round((statistics.stdev(list_score)), 2)
         
         # Calculate median
         sorted_scores = sorted(list_score)
@@ -76,7 +77,6 @@ def process_scores(list_score: List) -> None:
 # stored in a variable. Then, modify the call to the process_scores() function so it passes
 # just the scores list to it.
 def main():
-    system("clear")
     display_welcome()
     list_score = get_scores() # return list
     process_scores(list_score) # recive a list for process
