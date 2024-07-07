@@ -68,10 +68,13 @@ def game_process():
     '''
     while True:
         word = input("Enter a word: ")
-        score = scrabble_score(word)
-        print(word, "is worth", score, "points.")
-        print("")
-        play_again()
+        if word.isalpha() == False:
+            print("Invalid input. Please enter a word.")
+        else:
+            score = scrabble_score(word)
+            print(word, "is worth", score, "points.")
+            print("")
+            play_again()
 
 
 def main():

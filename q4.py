@@ -22,7 +22,6 @@ def random_collection(size: int)-> list:
     return random_integers
 
 def main():
-    system('clear')
     print("")
     # input
     size = int(input("Enter the size of collection: "))
